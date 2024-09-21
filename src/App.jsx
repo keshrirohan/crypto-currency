@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Navbar from "./Pages/Dashboard/component/Navbar";
+import Sidebar from "./Pages/Dashboard/component/Sidebar";
+import HeroSection from "./Pages/Dashboard/component/HeroSection";
+import { MdHeight } from "react-icons/md";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className=" d-flex border  " style={{ height: "100vh" }}>
+      <aside
+        className="container d-none d-md-block   h-100 py-5 px-2 "
+        style={{ flexBasis: "250px" }}
+      >
+        <Sidebar></Sidebar>
+      </aside>
 
-export default App
+      <div className=" flex-grow-1 w-100  ">
+        <Navbar></Navbar>
+        <HeroSection></HeroSection>
+      </div>
+    </div>
+  );
+};
+
+export default App;
