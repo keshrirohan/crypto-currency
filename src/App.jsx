@@ -14,8 +14,11 @@ const App = () => {
         <Sidebar></Sidebar>
       </aside>
 
-      <div className=" flex-grow-1 w-100  ">
-        <Navbar></Navbar>
+      <div className=" flex-grow-1   w-100  ">
+        <nav className="container d-flex py-2 justify-content-center  ">
+          <Navbar></Navbar>
+        </nav>
+
         <HeroSection></HeroSection>
       </div>
     </div>

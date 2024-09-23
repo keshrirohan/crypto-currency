@@ -5,8 +5,8 @@ import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
   return (
     <ul
-      className=" d-flex align-items-center justify-content-between px-md-5 w-100 "
-      style={{ listStyle: "none"}}
+      className="  w-100 m-0 p-0 h-100 d-flex justify-content-between align-items-center  "
+      style={{ listStyle: "none" }}
     >
       <li className="d-md-none">
         <FaHamburger className=" fs-2" />
